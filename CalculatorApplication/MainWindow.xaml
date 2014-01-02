@@ -1,0 +1,16 @@
+﻿<Window  x:Class="CalculatorApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <TextBlock x:Name="ResultTextBox" />
+        <Grid>
+            <Button Height="20" Margin="30,41,454,259" Click="Button_Click_1" >
+                <TextBlock>1</TextBlock>
+            </Button>
+            <Button Height="20" Margin="86,41,398,259" Click="Button_Click_2">
+                <TextBlock>2</TextBlock>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
