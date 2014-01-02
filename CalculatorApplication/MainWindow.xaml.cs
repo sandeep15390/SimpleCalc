@@ -34,5 +34,10 @@ namespace CalculatorApplication
         {
             ResultTextBox.Text = String.Concat(ResultTextBox.Text, "2");
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            ResultTextBox.Text = String.Concat(ResultTextBox.Text, "3");
+        }
     }
 }
