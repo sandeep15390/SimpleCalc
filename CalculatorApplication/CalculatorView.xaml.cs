@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace CalculatorApplication
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CalculatorView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CalculatorView : Window
     {
-        public MainWindow()
+        public CalculatorView()
         {
             InitializeComponent();
         }
