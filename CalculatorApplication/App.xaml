@@ -1,4 +1,4 @@
-﻿<Application x:Class="SampleWpfApplication.App"
+﻿<Application x:Class="WpfCalculatorApplication.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="CalculatorView.xaml">
