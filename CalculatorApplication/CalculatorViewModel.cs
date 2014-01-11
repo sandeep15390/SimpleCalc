@@ -11,8 +11,11 @@ namespace WpfCalculatorApplication
     /// <summary>
     /// ViewModel for the calculator
     /// </summary>
-    public class CalculatorViewModel : INotifyPropertyChanged
+    public class CalculatorViewModel : ICalculatorViewModel, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
         public CalculatorViewModel()
         {
             Result = "some random text";
@@ -34,7 +37,7 @@ namespace WpfCalculatorApplication
         /// <summary>
         /// Command for number buttons
         /// </summary>
-        public ICommand NumberButtonCommand
+        public DelegateCommand NumberButtonCommand
         {
             get
             {
