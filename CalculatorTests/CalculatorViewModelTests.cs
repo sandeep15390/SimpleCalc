@@ -1,22 +1,26 @@
 ﻿using System;
+using Moq;
 using NUnit.Framework;
+using System.Windows.Input;
+using WpfCalculatorApplication;
 
 namespace CalculatorTests
 {
     [TestFixture]
-    public class UnitTest1
+    public class CalculatorViewModelTests
     {
+        private CalculatorViewModel _viewModel;
+
         [SetUp]
         public void SetUp()
         {
+            _viewModel = new CalculatorViewModel();
         }
 
         [Test]
-        public void TestMethod1()
+        public void ViewModelInitializationTest()
         {
-            var integer1 = "23";
-            var integer2 = "23";
-            Assert.That(integer1.Equals(integer2));
+            Assert.That(_viewModel.Result.Equals("some random text"));
         }
     }
 }
