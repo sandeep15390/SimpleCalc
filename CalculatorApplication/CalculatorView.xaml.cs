@@ -23,6 +23,8 @@ namespace CalculatorApplication
         public CalculatorView()
         {
             InitializeComponent();
+            PlusOrMinusButton.Content = "\u00B1";
+            SquareRootButton.Content = "\u221a";
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

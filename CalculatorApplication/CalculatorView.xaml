@@ -21,18 +21,21 @@
         <Grid Grid.Row="1" Margin="10" Background="AliceBlue">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="50"/>
-                <ColumnDefinition Width="50"/>
-                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Border Grid.Row="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="1">
+            <Border Grid.Row="0" Grid.ColumnSpan="5" BorderBrush="Black" BorderThickness="1">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="20"/>
@@ -42,17 +45,30 @@
                     <TextBlock x:Name="ResultTextBox" Grid.Row="1" FontSize="18" TextAlignment="Right" Text="{Binding Result}"/>
                 </Grid>
             </Border>
-            <Button Height="20" Width="40" Grid.Row="1" Grid.Column="0" Command="{Binding NumberButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="1"/>
-            <Button Height="20" Width="40" Grid.Row="1" Grid.Column="1" Command="{Binding NumberButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="2"/>
-            <Button Height="20" Width="40" Grid.Row="1" Grid.Column="2" Command="{Binding NumberButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="3"/>
-            <Button Height="20" Width="40" Grid.Row="2" Grid.Column="0" Command="{Binding NumberButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="4"/>
-            <Button Height="20" Width="40" Grid.Row="2" Grid.Column="1" Command="{Binding NumberButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="5"/>
-            <Button Height="20" Width="40" Grid.Row="2" Grid.Column="2" Command="{Binding NumberButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="6"/>
-            <Button Height="20" Width="40" Grid.Row="3" Grid.Column="0" Command="{Binding NumberButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="7"/>
-            <Button Height="20" Width="40" Grid.Row="3" Grid.Column="1" Command="{Binding NumberButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="8"/>
-            <Button Height="20" Width="40" Grid.Row="3" Grid.Column="2" Command="{Binding NumberButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="9"/>
-            <Button Height="20" Width="90" Grid.Row="4"  Grid.Column="0" Grid.ColumnSpan="2" Command="{Binding NumberButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="0"/>
-            <Button Height="20" Width="40" Grid.Row="4" Grid.Column="2" Content="."/>
+            <Button Height="20" Width="28" Grid.Row="2" Grid.Column="0" Command="{Binding NumberButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="1"/>
+            <Button Height="20" Width="28" Grid.Row="2" Grid.Column="1" Command="{Binding NumberButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="2"/>
+            <Button Height="20" Width="28" Grid.Row="2" Grid.Column="2" Command="{Binding NumberButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="3"/>
+            <Button Height="20" Width="28" Grid.Row="3" Grid.Column="0" Command="{Binding NumberButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="4"/>
+            <Button Height="20" Width="28" Grid.Row="3" Grid.Column="1" Command="{Binding NumberButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="5"/>
+            <Button Height="20" Width="28" Grid.Row="3" Grid.Column="2" Command="{Binding NumberButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="6"/>
+            <Button Height="20" Width="28" Grid.Row="4" Grid.Column="0" Command="{Binding NumberButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="7"/>
+            <Button Height="20" Width="28" Grid.Row="4" Grid.Column="1" Command="{Binding NumberButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="8"/>
+            <Button Height="20" Width="28" Grid.Row="4" Grid.Column="2" Command="{Binding NumberButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="9"/>
+            <Button Height="20" Width="67" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Command="{Binding NumberButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="0"/>
+            <Button Height="20" Width="28" Grid.Row="5" Grid.Column="2" Content="."/>
+
+            <Button x:Name="MCButton" Height="20" Width="28" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
+            <Button x:Name="MRButton" Height="20" Width="28" Grid.Row="1" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
+            <Button x:Name="MSButton" Height="20" Width="28" Grid.Row="1" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
+            <Button x:Name="PlusOrMinusButton" Height="20" Width="28" Grid.Row="1" Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
+            <Button x:Name="DivisionButton" Height="20" Width="28" Grid.Row="2" Grid.Column="3" Content="/" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
+            <Button x:Name="MultiplyButton" Height="20" Width="28" Grid.Row="3" Grid.Column="3" Content="*" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
+            <Button x:Name="SubtractionButton" Height="20" Width="28" Grid.Row="4" Grid.Column="3" Content="-" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
+            <Button x:Name="AdditionButton" Height="20" Width="28" Grid.Row="5" Grid.Column="3" Content="+" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
+            <Button x:Name="SquareRootButton" Height="20" Width="28" Grid.Row="1" Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
+            <Button x:Name="PercentageButton" Height="20" Width="28" Grid.Row="2" Grid.Column="4" Content="%" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
+            <Button x:Name="InverseButton" Height="20" Width="28" Grid.Row="3" Grid.Column="4" Content="1/x" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
+            <Button x:Name="EqualsButton" Height="56" Width="28" Grid.Row="4" Grid.Column="4" Grid.RowSpan="2" Content="=" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         </Grid>
     </Grid>
 </Window>

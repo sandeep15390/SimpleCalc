@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using NCalc;
 
 namespace WpfCalculatorApplication
 {
@@ -99,5 +100,13 @@ namespace WpfCalculatorApplication
         }
 
         private string _result;
+
+        public string EvaluateExpression(string expression)
+        {
+            Expression e = new Expression(expression);
+            return e.Evaluate().ToString();
+        }
     }
+
+
 }
