@@ -1,17 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\GSREDDY\Documents\GitHub\SimpleCalc\CalculatorTests\CalculatorTests.nunit" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-01-12" time="16:38:10">
+<test-results name="C:\Users\GSREDDY\Documents\GitHub\SimpleCalc\CalculatorTests\CalculatorTests.nunit" total="4" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-01-22" time="22:25:16">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.5472" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="GSREDDY-PC" user="GSREDDY" user-domain="GSREDDY-PC" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Project" name="C:\Users\GSREDDY\Documents\GitHub\SimpleCalc\CalculatorTests\CalculatorTests.nunit" executed="True" result="Success" success="True" time="0.098" asserts="0">
+  <test-suite type="Project" name="C:\Users\GSREDDY\Documents\GitHub\SimpleCalc\CalculatorTests\CalculatorTests.nunit" executed="True" result="Success" success="True" time="0.505" asserts="0">
     <results>
-      <test-suite type="Assembly" name="C:\Users\GSREDDY\Documents\GitHub\SimpleCalc\CalculatorTests\..\bin\Debug\CalculatorTests.dll" executed="True" result="Success" success="True" time="0.070" asserts="0">
+      <test-suite type="Assembly" name="C:\Users\GSREDDY\Documents\GitHub\SimpleCalc\CalculatorTests\..\bin\Debug\CalculatorTests.dll" executed="True" result="Success" success="True" time="0.476" asserts="0">
         <results>
-          <test-suite type="Namespace" name="CalculatorTests" executed="True" result="Success" success="True" time="0.069" asserts="0">
+          <test-suite type="Namespace" name="CalculatorTests" executed="True" result="Success" success="True" time="0.475" asserts="0">
             <results>
-              <test-suite type="TestFixture" name="CalculatorViewModelTests" executed="True" result="Success" success="True" time="0.065" asserts="0">
+              <test-suite type="TestFixture" name="CalculatorViewModelTests" executed="True" result="Success" success="True" time="0.471" asserts="0">
                 <results>
-                  <test-case name="CalculatorTests.CalculatorViewModelTests.ViewModelInitializationTest" executed="True" result="Success" success="True" time="0.041" asserts="1" />
+                  <test-case name="CalculatorTests.CalculatorViewModelTests.ArithematicCommandTest" executed="True" result="Success" success="True" time="0.044" asserts="1" />
+                  <test-case name="CalculatorTests.CalculatorViewModelTests.EqualsTest" executed="True" result="Success" success="True" time="0.374" asserts="2" />
+                  <test-case name="CalculatorTests.CalculatorViewModelTests.NumberButtonCommandTest" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="CalculatorTests.CalculatorViewModelTests.ViewModelInitializationTest" executed="True" result="Success" success="True" time="0.001" asserts="1" />
                 </results>
               </test-suite>
             </results>

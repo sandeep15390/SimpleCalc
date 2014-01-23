@@ -28,6 +28,14 @@ namespace WpfCalculatorApplication
         }
 
         /// <summary>
+        /// Command for math operation buttons
+        /// </summary>
+        DelegateCommand ArithematicButtonCommand
+        {
+            get;
+        }
+
+        /// <summary>
         /// Property changed event
         /// </summary>
         event PropertyChangedEventHandler PropertyChanged;

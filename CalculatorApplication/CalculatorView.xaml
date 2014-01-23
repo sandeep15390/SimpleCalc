@@ -61,14 +61,22 @@
             <Button x:Name="MRButton" Height="20" Width="28" Grid.Row="1" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
             <Button x:Name="MSButton" Height="20" Width="28" Grid.Row="1" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
             <Button x:Name="PlusOrMinusButton" Height="20" Width="28" Grid.Row="1" Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
-            <Button x:Name="DivisionButton" Height="20" Width="28" Grid.Row="2" Grid.Column="3" Content="/" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
-            <Button x:Name="MultiplyButton" Height="20" Width="28" Grid.Row="3" Grid.Column="3" Content="*" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
-            <Button x:Name="SubtractionButton" Height="20" Width="28" Grid.Row="4" Grid.Column="3" Content="-" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
-            <Button x:Name="AdditionButton" Height="20" Width="28" Grid.Row="5" Grid.Column="3" Content="+" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
-            <Button x:Name="SquareRootButton" Height="20" Width="28" Grid.Row="1" Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
-            <Button x:Name="PercentageButton" Height="20" Width="28" Grid.Row="2" Grid.Column="4" Content="%" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
-            <Button x:Name="InverseButton" Height="20" Width="28" Grid.Row="3" Grid.Column="4" Content="1/x" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
-            <Button x:Name="EqualsButton" Height="56" Width="28" Grid.Row="4" Grid.Column="4" Grid.RowSpan="2" Content="=" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Button x:Name="DivisionButton" Height="20" Width="28" Grid.Row="2" Grid.Column="3" Content="/" HorizontalContentAlignment="Center" 
+                    VerticalContentAlignment="Stretch" Command="{Binding ArithematicButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+            <Button x:Name="MultiplyButton" Height="20" Width="28" Grid.Row="3" Grid.Column="3" Content="*" HorizontalContentAlignment="Center" 
+                    VerticalContentAlignment="Stretch" Command="{Binding ArithematicButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+            <Button x:Name="SubtractionButton" Height="20" Width="28" Grid.Row="4" Grid.Column="3" Content="-" HorizontalContentAlignment="Center" 
+                    VerticalContentAlignment="Stretch" Command="{Binding ArithematicButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+            <Button x:Name="AdditionButton" Height="20" Width="28" Grid.Row="5" Grid.Column="3" Content="+" HorizontalContentAlignment="Center" 
+                    VerticalContentAlignment="Stretch" Command="{Binding ArithematicButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+            <Button x:Name="SquareRootButton" Height="20" Width="28" Grid.Row="1" Grid.Column="4" HorizontalContentAlignment="Center" 
+                    VerticalContentAlignment="Stretch" Command="{Binding ArithematicButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+            <Button x:Name="PercentageButton" Height="20" Width="28" Grid.Row="2" Grid.Column="4" Content="%" HorizontalContentAlignment="Center" 
+                    VerticalContentAlignment="Stretch" Command="{Binding ArithematicButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+            <Button x:Name="InverseButton" Height="20" Width="28" Grid.Row="3" Grid.Column="4" Content="1/x" HorizontalContentAlignment="Center" 
+                    VerticalContentAlignment="Stretch" Command="{Binding ArithematicButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+            <Button x:Name="EqualsButton" Height="56" Width="28" Grid.Row="4" Grid.Column="4" Grid.RowSpan="2" Content="=" HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center" Command="{Binding ArithematicButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
         </Grid>
     </Grid>
 </Window>

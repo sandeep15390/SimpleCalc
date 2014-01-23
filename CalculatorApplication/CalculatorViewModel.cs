@@ -19,7 +19,7 @@ namespace WpfCalculatorApplication
         /// </summary>
         public CalculatorViewModel()
         {
-            Result = "some random text";
+            Result = "0";
         }
 
         /// <summary>
@@ -51,36 +51,78 @@ namespace WpfCalculatorApplication
             switch (int.Parse(sender.ToString()))
             {
                 case 1:
-                    Result = "1";
+                    ConcatToResult("1");
                     break;
                 case 2:
-                    Result = "2";
+                    ConcatToResult("2");
                     break;
                 case 3:
-                    Result = "3";
+                    ConcatToResult("3");
                     break;
                 case 4:
-                    Result = "4";
+                    ConcatToResult("4");
                     break;
                 case 5:
-                    Result = "5";
+                    ConcatToResult("5");
                     break;
                 case 6:
-                    Result = "6";
+                    ConcatToResult("6");
                     break;
                 case 7:
-                    Result = "7";
+                    ConcatToResult("7");
                     break;
                 case 8:
-                    Result = "8";
+                    ConcatToResult("8");
                     break;
                 case 9:
-                    Result = "9";
+                    ConcatToResult("9");
                     break;
                 case 0:
-                    Result = "0";
+                    ConcatToResult("0");
                     break;
             }
+        }
+
+        private void ConcatToResult(string concatString)
+        {
+            if (Result == "0")
+                Result = concatString;
+            else
+                Result = Result + concatString;
+        }
+
+        /// <summary>
+        /// Command for number buttons
+        /// </summary>
+        public DelegateCommand ArithematicButtonCommand
+        {
+            get
+            {
+                return new DelegateCommand(ArithematicButtonCommandExecuted);
+            }
+        }
+
+        private void ArithematicButtonCommandExecuted(object sender)
+        {
+            switch (sender.ToString())
+            {
+                case "+":
+                    Result = Result + "+";
+                    break;
+                case "-":
+                    Result = Result + "-";
+                    break;
+                case "/":
+                    Result = Result + "/";
+                    break;
+                case "*":
+                    Result = Result + "*";
+                    break;
+                case "=":
+                    Result = EvaluateExpression(Result);
+                    break;
+            }
+
         }
 
         /// <summary>
