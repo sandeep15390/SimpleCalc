@@ -1,9 +1,10 @@
 ﻿<Window  x:Class="CalculatorApplication.CalculatorView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-         xmlns:VM="clr-namespace:WpfCalculatorApplication"
+        xmlns:VM="clr-namespace:WpfCalculatorApplication"
         Title="Calculator" Height="320" Width="225"
-        ResizeMode="CanMinimize" Background="LightGray">
+        ResizeMode="CanMinimize" Background="LightGray" 
+        Icon="calculator.ico">
     <Window.DataContext>
         <VM:CalculatorViewModel/>
     </Window.DataContext>
