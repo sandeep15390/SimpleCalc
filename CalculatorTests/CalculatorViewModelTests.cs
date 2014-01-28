@@ -40,7 +40,8 @@ namespace CalculatorTests
             _viewModel.NumberButtonCommand.Execute(2);
             _viewModel.ArithematicButtonCommand.Execute("+");
             _viewModel.NumberButtonCommand.Execute(2);
-            Assert.That(_viewModel.Result.Equals("52+2"));
+            Assert.That(_viewModel.CalcRibbon, Is.EqualTo("52+"));
+            Assert.That(_viewModel.Result, Is.EqualTo("2"));
         }
 
         [Test]
@@ -51,9 +52,19 @@ namespace CalculatorTests
             _viewModel.NumberButtonCommand.Execute(2);
             _viewModel.ArithematicButtonCommand.Execute("+");
             _viewModel.NumberButtonCommand.Execute(2);
-            Assert.That(_viewModel.Result.Equals("52+2"));
+            Assert.That(_viewModel.CalcRibbon, Is.EqualTo("52+"));
             _viewModel.ArithematicButtonCommand.Execute("=");
-            Assert.That(_viewModel.Result.Equals("54"));
+            Assert.That(_viewModel.Result, Is.EqualTo("54"));
+        }
+
+        [Test]
+        public void ClearEntryTest()
+        {
+            _viewModel.Result = "some text";
+            _viewModel.CalcRibbon = "some other text";
+            _viewModel.ClearEntryButtonCommand.Execute(null);
+            Assert.That(_viewModel.Result.Equals("0"));
+            Assert.That(_viewModel.CalcRibbon, Is.Not.Empty);
         }
     }
 }

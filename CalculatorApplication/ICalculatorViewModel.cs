@@ -20,6 +20,15 @@ namespace WpfCalculatorApplication
         }
 
         /// <summary>
+        /// keeps track of calculations
+        /// </summary>
+        string CalcRibbon
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Command for number buttons
         /// </summary>
         DelegateCommand NumberButtonCommand
@@ -31,6 +40,22 @@ namespace WpfCalculatorApplication
         /// Command for math operation buttons
         /// </summary>
         DelegateCommand ArithematicButtonCommand
+        {
+            get;
+        }
+
+        /// <summary>
+        /// Command for number buttons
+        /// </summary>
+        DelegateCommand ClearEntryButtonCommand
+        {
+            get;
+        }
+
+        /// <summary>
+        /// Command for number buttons
+        /// </summary>
+        DelegateCommand ClearButtonCommand
         {
             get;
         }

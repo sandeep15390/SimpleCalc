@@ -25,21 +25,7 @@ namespace CalculatorApplication
             InitializeComponent();
             PlusOrMinusButton.Content = "\u00B1";
             SquareRootButton.Content = "\u221a";
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            ResultTextBox.Text = String.Concat(ResultTextBox.Text, "1");
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            ResultTextBox.Text = String.Concat(ResultTextBox.Text, "2");
-        }
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            ResultTextBox.Text = String.Concat(ResultTextBox.Text, "3");
+            BackButton.Content = "<-";
         }
     }
 }

@@ -20,6 +20,7 @@ namespace WpfCalculatorApplication
         public CalculatorViewModel()
         {
             Result = "0";
+            CalcRibbon = string.Empty;
         }
 
         /// <summary>
@@ -86,10 +87,24 @@ namespace WpfCalculatorApplication
         private void ConcatToResult(string concatString)
         {
             if (Result == "0")
+            {
                 Result = concatString;
+            }
             else
-                Result = Result + concatString;
+            {
+                if(_isAfterCalculation)
+                {
+                    Result = concatString;
+                }
+                else
+                {
+                    Result = Result + concatString;
+                }
+                _isAfterCalculation = false;
+            }
         }
+
+        private bool _isAfterCalculation;
 
         /// <summary>
         /// Command for number buttons
@@ -107,22 +122,58 @@ namespace WpfCalculatorApplication
             switch (sender.ToString())
             {
                 case "+":
-                    Result = Result + "+";
+                    PushAndConcat("+");
                     break;
                 case "-":
-                    Result = Result + "-";
+                    PushAndConcat("-");
                     break;
                 case "/":
-                    Result = Result + "/";
+                    PushAndConcat("/");
                     break;
                 case "*":
-                    Result = Result + "*";
+                    PushAndConcat("*");
                     break;
                 case "=":
-                    Result = EvaluateExpression(Result);
+                    CalcRibbon = CalcRibbon + Result;
+                    Result = EvaluateExpression(CalcRibbon);
+                    CalcRibbon = string.Empty;
                     break;
             }
+        }
 
+        private void PushAndConcat(string symbol)
+        {
+            CalcRibbon = CalcRibbon + Result;
+            Result = EvaluateExpression(CalcRibbon);
+            CalcRibbon = CalcRibbon + symbol;
+            _isAfterCalculation = true;
+        }
+
+        public DelegateCommand ClearButtonCommand
+        {
+            get
+            {
+                return new DelegateCommand(ClearButtonCommandExecuted);
+            }
+        }
+
+        private void ClearButtonCommandExecuted(object obj)
+        {
+            Result = "0";
+            CalcRibbon = string.Empty;
+        }
+
+        public DelegateCommand ClearEntryButtonCommand
+        {
+            get
+            {
+                return new DelegateCommand(ClearEntryButtonCommandExecuted);
+            }
+        }
+
+        private void ClearEntryButtonCommandExecuted(object obj)
+        {
+            Result = "0";
         }
 
         /// <summary>
@@ -142,6 +193,21 @@ namespace WpfCalculatorApplication
         }
 
         private string _result;
+
+        public string CalcRibbon
+        {
+            get
+            {
+                return _calcRibbon;
+            }
+            set
+            {
+                _calcRibbon = value;
+                OnPropertyChanged("CalcRibbon");
+            }
+        }
+
+        private string _calcRibbon;
 
         public string EvaluateExpression(string expression)
         {

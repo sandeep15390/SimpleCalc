@@ -19,7 +19,7 @@
             <MenuItem Header="Edit"/>
             <MenuItem Header="Help"/>
         </Menu>
-        <Grid Grid.Row="1" Margin="10" Background="AliceBlue">
+        <Grid Grid.Row="1" Margin="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="35"/>
@@ -37,12 +37,12 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Border Grid.Row="0" Grid.ColumnSpan="5" BorderBrush="Black" BorderThickness="1">
-                <Grid>
+                <Grid Background="AliceBlue">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="20"/>
                         <RowDefinition Height="30"/>
                     </Grid.RowDefinitions>
-                    <TextBlock x:Name="Tracker" Grid.Row="0" FontSize="13" TextAlignment="Right" Text="{Binding Result}"/>
+                    <TextBlock x:Name="Tracker" Grid.Row="0" FontSize="13" TextAlignment="Right" Text="{Binding CalcRibbon}"/>
                     <TextBlock x:Name="ResultTextBox" Grid.Row="1" FontSize="18" TextAlignment="Right" Text="{Binding Result}"/>
                 </Grid>
             </Border>
@@ -58,9 +58,9 @@
             <Button Height="20" Width="67" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Command="{Binding NumberButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="0"/>
             <Button Height="20" Width="28" Grid.Row="5" Grid.Column="2" Content="."/>
 
-            <Button x:Name="MCButton" Height="20" Width="28" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
-            <Button x:Name="MRButton" Height="20" Width="28" Grid.Row="1" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
-            <Button x:Name="MSButton" Height="20" Width="28" Grid.Row="1" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
+            <Button x:Name="BackButton" Height="20" Width="28" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
+            <Button x:Name="ClearEntryButton" Height="20" Width="28" Grid.Row="1" Grid.Column="1" Content="CE" Command="{Binding ClearEntryButtonCommand}" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
+            <Button x:Name="ClearButton" Height="20" Width="28" Grid.Row="1" Grid.Column="2" Content="C" Command="{Binding ClearButtonCommand}" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" />
             <Button x:Name="PlusOrMinusButton" Height="20" Width="28" Grid.Row="1" Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
             <Button x:Name="DivisionButton" Height="20" Width="28" Grid.Row="2" Grid.Column="3" Content="/" HorizontalContentAlignment="Center" 
                     VerticalContentAlignment="Stretch" Command="{Binding ArithematicButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
