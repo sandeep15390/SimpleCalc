@@ -5,8 +5,8 @@
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
     <Node UniqueName="[0-1000]C:\Users\GSREDDY\Documents\GitHub\SimpleCalc\CalculatorTests\CalculatorTests.nunit" Expanded="true" />
-    <Node UniqueName="[0-1007]C:\Users\GSREDDY\Documents\GitHub\SimpleCalc\CalculatorTests\..\bin\Debug\CalculatorTests.dll" Expanded="true" />
-    <Node UniqueName="[0-1008]CalculatorTests" Expanded="true" />
+    <Node UniqueName="[0-1008]C:\Users\GSREDDY\Documents\GitHub\SimpleCalc\CalculatorTests\..\bin\Debug\CalculatorTests.dll" Expanded="true" />
+    <Node UniqueName="[0-1009]CalculatorTests" Expanded="true" />
     <Node UniqueName="[0-1001]CalculatorTests.CalculatorViewModelTests" Expanded="true" />
   </Nodes>
 </VisualState>

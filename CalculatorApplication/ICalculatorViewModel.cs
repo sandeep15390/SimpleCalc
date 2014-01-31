@@ -45,7 +45,7 @@ namespace WpfCalculatorApplication
         }
 
         /// <summary>
-        /// Command for number buttons
+        /// Command for clear entry button
         /// </summary>
         DelegateCommand ClearEntryButtonCommand
         {
@@ -61,9 +61,23 @@ namespace WpfCalculatorApplication
         }
 
         /// <summary>
+        /// Command for Back Button
+        /// </summary>
+        DelegateCommand BackButtonCommand
+        {
+            get;
+        }
+
+        /// <summary>
         /// Property changed event
         /// </summary>
         event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Evaluates the math expression
+        /// </summary>
+        /// <param name="expression">expresstion to be evaluated</param>
+        string EvaluateExpression(string expression);
     }
 }
  

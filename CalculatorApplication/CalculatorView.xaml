@@ -58,7 +58,7 @@
             <Button Height="20" Width="67" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Command="{Binding NumberButtonCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="0"/>
             <Button Height="20" Width="28" Grid.Row="5" Grid.Column="2" Content="."/>
 
-            <Button x:Name="BackButton" Height="20" Width="28" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
+            <Button x:Name="BackButton" Height="20" Width="28" Grid.Row="1" Grid.Column="0" Command="{Binding BackButtonCommand}" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
             <Button x:Name="ClearEntryButton" Height="20" Width="28" Grid.Row="1" Grid.Column="1" Content="CE" Command="{Binding ClearEntryButtonCommand}" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
             <Button x:Name="ClearButton" Height="20" Width="28" Grid.Row="1" Grid.Column="2" Content="C" Command="{Binding ClearButtonCommand}" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" />
             <Button x:Name="PlusOrMinusButton" Height="20" Width="28" Grid.Row="1" Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>

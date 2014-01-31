@@ -66,5 +66,17 @@ namespace CalculatorTests
             Assert.That(_viewModel.Result.Equals("0"));
             Assert.That(_viewModel.CalcRibbon, Is.Not.Empty);
         }
+
+        [Test]
+        public void BackButtonCommandTest()
+        {
+            _viewModel.Result = "123456";
+            _viewModel.BackButtonCommand.Execute(null);
+            Assert.That(_viewModel.Result, Is.EqualTo("12345"));
+
+            _viewModel.Result = "1";
+            _viewModel.BackButtonCommand.Execute(null);
+            Assert.That(_viewModel.Result, Is.EqualTo("0"));
+        }
     }
 }

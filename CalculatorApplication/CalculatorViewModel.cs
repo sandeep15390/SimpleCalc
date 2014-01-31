@@ -163,6 +163,9 @@ namespace WpfCalculatorApplication
             CalcRibbon = string.Empty;
         }
 
+        /// <summary>
+        /// Command for clear entry button
+        /// </summary>
         public DelegateCommand ClearEntryButtonCommand
         {
             get
@@ -175,6 +178,39 @@ namespace WpfCalculatorApplication
         {
             Result = "0";
         }
+
+        /// <summary>
+        /// Command for Back Button
+        /// </summary>
+        public DelegateCommand BackButtonCommand
+        {
+            get
+            {
+                return new DelegateCommand(BackButtonCommandExecuted);
+            }
+        }
+
+        private void BackButtonCommandExecuted(object obj)
+        {
+            if (!_isAfterCalculation)
+            {
+                Result = RemoveLastCharacterInString(Result);
+            }
+        }
+
+        private string RemoveLastCharacterInString(string stringToRemove)
+        {
+            if (stringToRemove.Length > 1)
+            {
+                var removedString = stringToRemove.Remove(stringToRemove.Length - 1, 1);
+                return removedString;
+            }
+            else
+            {
+                return "0";
+            }
+        }
+
 
         /// <summary>
         /// Result string property
@@ -194,6 +230,9 @@ namespace WpfCalculatorApplication
 
         private string _result;
 
+        /// <summary>
+        /// keeps track of calculations
+        /// </summary>
         public string CalcRibbon
         {
             get
@@ -209,12 +248,14 @@ namespace WpfCalculatorApplication
 
         private string _calcRibbon;
 
+        /// <summary>
+        /// Evaluates the math expression
+        /// </summary>
+        /// <param name="expression"></param>
         public string EvaluateExpression(string expression)
         {
             Expression e = new Expression(expression);
             return e.Evaluate().ToString();
         }
     }
-
-
 }
