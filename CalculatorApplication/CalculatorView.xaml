@@ -4,10 +4,8 @@
         xmlns:VM="clr-namespace:WpfCalculatorApplication"
         Title="Calculator" Height="320" Width="225"
         ResizeMode="CanMinimize" Background="LightGray" 
-        Icon="calculator.ico">
-    <Window.DataContext>
-        <VM:CalculatorViewModel/>
-    </Window.DataContext>
+        Icon="calculator.ico"
+         KeyDown="KeyDownEventHandler">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
