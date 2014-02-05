@@ -157,7 +157,7 @@ namespace WpfCalculatorApplication
             }
         }
 
-        private void ClearButtonCommandExecuted(object obj)
+        private void ClearButtonCommandExecuted()
         {
             Result = "0";
             CalcRibbon = string.Empty;
@@ -174,7 +174,7 @@ namespace WpfCalculatorApplication
             }
         }
 
-        private void ClearEntryButtonCommandExecuted(object obj)
+        private void ClearEntryButtonCommandExecuted()
         {
             Result = "0";
         }
@@ -190,7 +190,7 @@ namespace WpfCalculatorApplication
             }
         }
 
-        private void BackButtonCommandExecuted(object obj)
+        private void BackButtonCommandExecuted()
         {
             if (!_isAfterCalculation)
             {

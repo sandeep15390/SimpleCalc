@@ -12,12 +12,22 @@ namespace WpfCalculatorApplication
     /// </summary>
     public class DelegateCommand : ICommand
     {
-        public DelegateCommand(Action<object> executeMethod)
+        public DelegateCommand(Action<object> actionToExecute)
         {
-            _executeMethod = executeMethod;
+            _actionToExecuteWithOneParameter = actionToExecute;
+        }
+        
+        /// <summary>
+        /// DelegateCommand constructor 
+        /// </summary>
+        /// <param name="executeMethod"></param>
+        public DelegateCommand(Action actionToExecute)
+        {
+            _actionToExecuteNoParameters = actionToExecute;
         }
 
-        private Action<object> _executeMethod;
+        private Action<object> _actionToExecuteWithOneParameter;
+        private Action _actionToExecuteNoParameters;
 
         /// <summary>
         /// Returns if the comand can be executed 
@@ -40,7 +50,14 @@ namespace WpfCalculatorApplication
         /// <param name="parameter"></param>
         public void Execute(object parameter)
         {
-            _executeMethod.Invoke(parameter);
+            if (parameter == null)
+            {
+                _actionToExecuteNoParameters.Invoke();
+            }
+            else
+            {
+                _actionToExecuteWithOneParameter.Invoke(parameter);
+            }
         }
     }
 }
