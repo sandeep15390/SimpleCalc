@@ -36,54 +36,6 @@ namespace WpfCalculatorApplication
             }
         }
 
-        /// <summary>
-        /// Command for number buttons
-        /// </summary>
-        public DelegateCommand NumberButtonCommand
-        {
-            get
-            {
-                return new DelegateCommand(NumberButtonCommandExecuted);
-            }
-        }
-
-        private void NumberButtonCommandExecuted(object sender)
-        {
-            switch (int.Parse(sender.ToString()))
-            {
-                case 1:
-                    ConcatToResult("1");
-                    break;
-                case 2:
-                    ConcatToResult("2");
-                    break;
-                case 3:
-                    ConcatToResult("3");
-                    break;
-                case 4:
-                    ConcatToResult("4");
-                    break;
-                case 5:
-                    ConcatToResult("5");
-                    break;
-                case 6:
-                    ConcatToResult("6");
-                    break;
-                case 7:
-                    ConcatToResult("7");
-                    break;
-                case 8:
-                    ConcatToResult("8");
-                    break;
-                case 9:
-                    ConcatToResult("9");
-                    break;
-                case 0:
-                    ConcatToResult("0");
-                    break;
-            }
-        }
-
         private void ConcatToResult(string concatString)
         {
             if (Result == "0")
@@ -109,29 +61,35 @@ namespace WpfCalculatorApplication
         /// <summary>
         /// Command for number buttons
         /// </summary>
-        public DelegateCommand ArithematicButtonCommand
+        public DelegateCommand KeyButtonPressedCommand
         {
             get
             {
-                return new DelegateCommand(ArithematicButtonCommandExecuted);
+                return new DelegateCommand(KeyButtonPressed);
             }
         }
 
-        private void ArithematicButtonCommandExecuted(object sender)
+        private void KeyButtonPressed(object sender)
         {
             switch (sender.ToString())
             {
+                case "1":
+                case "2":
+                case "3":
+                case "4":
+                case "5":
+                case "6":
+                case "7":
+                case "8":
+                case "9":
+                case "0":
+                    ConcatToResult(sender.ToString());
+                    break;
                 case "+":
-                    PushAndConcat("+");
-                    break;
                 case "-":
-                    PushAndConcat("-");
-                    break;
                 case "/":
-                    PushAndConcat("/");
-                    break;
                 case "*":
-                    PushAndConcat("*");
+                    PushAndConcat(sender.ToString());
                     break;
                 case "=":
                     CalcRibbon = CalcRibbon + Result;

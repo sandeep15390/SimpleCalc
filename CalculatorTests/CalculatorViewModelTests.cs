@@ -27,8 +27,8 @@ namespace CalculatorTests
         public void NumberButtonCommandTest()
         {
             _viewModel.Result = string.Empty;
-            _viewModel.NumberButtonCommand.Execute(5);
-            _viewModel.NumberButtonCommand.Execute(2);
+            _viewModel.KeyButtonPressedCommand.Execute(5);
+            _viewModel.KeyButtonPressedCommand.Execute(2);
             Assert.That(_viewModel.Result.Equals("52"));
         }
 
@@ -36,10 +36,10 @@ namespace CalculatorTests
         public void ArithematicCommandTest()
         {
             _viewModel.Result = string.Empty;
-            _viewModel.NumberButtonCommand.Execute(5);
-            _viewModel.NumberButtonCommand.Execute(2);
-            _viewModel.ArithematicButtonCommand.Execute("+");
-            _viewModel.NumberButtonCommand.Execute(2);
+            _viewModel.KeyButtonPressedCommand.Execute(5);
+            _viewModel.KeyButtonPressedCommand.Execute(2);
+            _viewModel.KeyButtonPressedCommand.Execute("+");
+            _viewModel.KeyButtonPressedCommand.Execute(2);
             Assert.That(_viewModel.CalcRibbon, Is.EqualTo("52+"));
             Assert.That(_viewModel.Result, Is.EqualTo("2"));
         }
@@ -48,12 +48,12 @@ namespace CalculatorTests
         public void EqualsTest()
         {
             _viewModel.Result = string.Empty;
-            _viewModel.NumberButtonCommand.Execute(5);
-            _viewModel.NumberButtonCommand.Execute(2);
-            _viewModel.ArithematicButtonCommand.Execute("+");
-            _viewModel.NumberButtonCommand.Execute(2);
+            _viewModel.KeyButtonPressedCommand.Execute(5);
+            _viewModel.KeyButtonPressedCommand.Execute(2);
+            _viewModel.KeyButtonPressedCommand.Execute("+");
+            _viewModel.KeyButtonPressedCommand.Execute(2);
             Assert.That(_viewModel.CalcRibbon, Is.EqualTo("52+"));
-            _viewModel.ArithematicButtonCommand.Execute("=");
+            _viewModel.KeyButtonPressedCommand.Execute("=");
             Assert.That(_viewModel.Result, Is.EqualTo("54"));
         }
 

@@ -33,9 +33,10 @@ namespace CalculatorApplication
 
         private CalculatorViewModel _viewModel;
 
-        private void KeyDownEventHandler(object sender, KeyEventArgs e)
+
+        private void PreviewTextInputHandler(object sender, TextCompositionEventArgs e)
         {
-            
+            _viewModel.KeyButtonPressedCommand.Execute(e.Text);
         }
     }
 }

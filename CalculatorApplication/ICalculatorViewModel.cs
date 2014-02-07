@@ -29,17 +29,9 @@ namespace WpfCalculatorApplication
         }
 
         /// <summary>
-        /// Command for number buttons
+        /// Command for any key or button press
         /// </summary>
-        DelegateCommand NumberButtonCommand
-        {
-            get;
-        }
-
-        /// <summary>
-        /// Command for math operation buttons
-        /// </summary>
-        DelegateCommand ArithematicButtonCommand
+        DelegateCommand KeyButtonPressedCommand
         {
             get;
         }
