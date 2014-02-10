@@ -45,38 +45,38 @@
                     <TextBlock x:Name="ResultTextBox" Grid.Row="1" FontSize="18" TextAlignment="Right" Text="{Binding Result}"/>
                 </Grid>
             </Border>
-            <Button Height="20" Width="28" Grid.Row="2" Grid.Column="0" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="1"/>
-            <Button Height="20" Width="28" Grid.Row="2" Grid.Column="1" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="2"/>
-            <Button Height="20" Width="28" Grid.Row="2" Grid.Column="2" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="3"/>
-            <Button Height="20" Width="28" Grid.Row="3" Grid.Column="0" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="4"/>
-            <Button Height="20" Width="28" Grid.Row="3" Grid.Column="1" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="5"/>
-            <Button Height="20" Width="28" Grid.Row="3" Grid.Column="2" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="6"/>
-            <Button Height="20" Width="28" Grid.Row="4" Grid.Column="0" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="7"/>
-            <Button Height="20" Width="28" Grid.Row="4" Grid.Column="1" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="8"/>
-            <Button Height="20" Width="28" Grid.Row="4" Grid.Column="2" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="9"/>
-            <Button Height="20" Width="67" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="0"/>
-            <Button Height="20" Width="28" Grid.Row="5" Grid.Column="2" Content="."/>
+            <Button Height="20" Width="28" Grid.Row="2" Grid.Column="0" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="1" Focusable="False"/>
+            <Button Height="20" Width="28" Grid.Row="2" Grid.Column="1" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="2" Focusable="False"/>
+            <Button Height="20" Width="28" Grid.Row="2" Grid.Column="2" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="3" Focusable="False"/>
+            <Button Height="20" Width="28" Grid.Row="3" Grid.Column="0" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="4" Focusable="False"/>
+            <Button Height="20" Width="28" Grid.Row="3" Grid.Column="1" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="5" Focusable="False"/>
+            <Button Height="20" Width="28" Grid.Row="3" Grid.Column="2" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="6" Focusable="False"/>
+            <Button Height="20" Width="28" Grid.Row="4" Grid.Column="0" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="7" Focusable="False"/>
+            <Button Height="20" Width="28" Grid.Row="4" Grid.Column="1" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="8" Focusable="False"/>
+            <Button Height="20" Width="28" Grid.Row="4" Grid.Column="2" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="9" Focusable="False"/>
+            <Button Height="20" Width="67" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Content="0" Focusable="False"/>
+            <Button Height="20" Width="28" Grid.Row="5" Grid.Column="2" Content="." Focusable="False"/>
 
-            <Button x:Name="BackButton" Height="20" Width="28" Grid.Row="1" Grid.Column="0" Command="{Binding BackButtonCommand}" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
-            <Button x:Name="ClearEntryButton" Height="20" Width="28" Grid.Row="1" Grid.Column="1" Content="CE" Command="{Binding ClearEntryButtonCommand}" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
-            <Button x:Name="ClearButton" Height="20" Width="28" Grid.Row="1" Grid.Column="2" Content="C" Command="{Binding ClearButtonCommand}" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" />
-            <Button x:Name="PlusOrMinusButton" Height="20" Width="28" Grid.Row="1" Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
+            <Button x:Name="BackButton" Height="20" Width="28" Grid.Row="1" Grid.Column="0" Command="{Binding BackButtonCommand}" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Focusable="False"/>
+            <Button x:Name="ClearEntryButton" Height="20" Width="28" Grid.Row="1" Grid.Column="1" Content="CE" Command="{Binding ClearEntryButtonCommand}" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Focusable="False"/>
+            <Button x:Name="ClearButton" Height="20" Width="28" Grid.Row="1" Grid.Column="2" Content="C" Command="{Binding ClearButtonCommand}" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Focusable="False"/>
+            <Button x:Name="PlusOrMinusButton" Height="20" Width="28" Grid.Row="1" Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Focusable="False"/>
             <Button x:Name="DivisionButton" Height="20" Width="28" Grid.Row="2" Grid.Column="3" Content="/" HorizontalContentAlignment="Center" 
-                    VerticalContentAlignment="Stretch" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+                    VerticalContentAlignment="Stretch" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Focusable="False"/>
             <Button x:Name="MultiplyButton" Height="20" Width="28" Grid.Row="3" Grid.Column="3" Content="*" HorizontalContentAlignment="Center" 
-                    VerticalContentAlignment="Stretch" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+                    VerticalContentAlignment="Stretch" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Focusable="False"/>
             <Button x:Name="SubtractionButton" Height="20" Width="28" Grid.Row="4" Grid.Column="3" Content="-" HorizontalContentAlignment="Center" 
-                    VerticalContentAlignment="Stretch" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+                    VerticalContentAlignment="Stretch" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Focusable="False"/>
             <Button x:Name="AdditionButton" Height="20" Width="28" Grid.Row="5" Grid.Column="3" Content="+" HorizontalContentAlignment="Center" 
-                    VerticalContentAlignment="Stretch" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+                    VerticalContentAlignment="Stretch" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Focusable="False"/>
             <Button x:Name="SquareRootButton" Height="20" Width="28" Grid.Row="1" Grid.Column="4" HorizontalContentAlignment="Center" 
-                    VerticalContentAlignment="Stretch" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+                    VerticalContentAlignment="Stretch" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Focusable="False"/>
             <Button x:Name="PercentageButton" Height="20" Width="28" Grid.Row="2" Grid.Column="4" Content="%" HorizontalContentAlignment="Center" 
-                    VerticalContentAlignment="Stretch" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+                    VerticalContentAlignment="Stretch" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Focusable="False"/>
             <Button x:Name="InverseButton" Height="20" Width="28" Grid.Row="3" Grid.Column="4" Content="1/x" HorizontalContentAlignment="Center" 
-                    VerticalContentAlignment="Stretch" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+                    VerticalContentAlignment="Stretch" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Focusable="False"/>
             <Button x:Name="EqualsButton" Height="56" Width="28" Grid.Row="4" Grid.Column="4" Grid.RowSpan="2" Content="=" HorizontalContentAlignment="Center"
-                    VerticalContentAlignment="Center" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}"/>
+                    VerticalContentAlignment="Center" Command="{Binding KeyButtonPressedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Content}" Focusable="False"/>
         </Grid>
     </Grid>
 </Window>
