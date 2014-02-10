@@ -5,7 +5,8 @@
         Title="Calculator" Height="320" Width="225"
         ResizeMode="CanMinimize" Background="LightGray" 
         Icon="calculator.ico"
-        PreviewTextInput="PreviewTextInputHandler">
+        PreviewTextInput="PreviewTextInputHandler"
+        KeyDown="KeyDownHandler">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>

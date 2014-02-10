@@ -38,5 +38,13 @@ namespace CalculatorApplication
         {
             _viewModel.KeyButtonPressedCommand.Execute(e.Text);
         }
+
+        private void KeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+            {
+                _viewModel.ClearButtonCommand.Execute(null);
+            }
+        }
     }
 }
